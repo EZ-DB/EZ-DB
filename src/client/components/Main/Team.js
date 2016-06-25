@@ -64,8 +64,8 @@ const TeamInfo = () => (
         {teamA.map((teamMember, index) =>
           <TeamEntry teamMemberA={teamMember} key={index} />
         )}
-      </div>
-  </div>
+      </div>  
+    </div>
   </div>
 );
 

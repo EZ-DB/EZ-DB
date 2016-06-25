@@ -75,12 +75,14 @@ class SignupModal extends Component {
                     placeholder="Enter goal"
                   />
                 </div>
-             </div>
-            <div className="modal-footer">
-              <button type="submit" className="btn btn-default">Login</button>
-              <button type="button" className="btn btn-default" data-dismiss="modal">Cancel</button>
-            </div>
-          </form>
+              </div>
+              <div className="modal-footer">
+                <button type="submit" className="btn btn-default">Login</button>
+                <button type="button" className="btn btn-default" data-dismiss="modal">
+                  Cancel
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
