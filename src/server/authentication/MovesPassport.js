@@ -3,13 +3,13 @@ const MovesStrategy = require('passport-moves').Strategy;
 const usersCtrl = require('../controllers/usersCtrl.js');
 const config = require('../config.js');
 
-passport.use(new MovesStrategy({
-  clientID: config.Moves.clientID,
-  clientSecret: config.Moves.clientSecret,
-  scope: ['activity', 'location'],
-  callbackURL: config.Moves.callbackURL
-}, 
-  (accessToken, refreshToken, profile, done) => {
+export default () => {
+  passport.use(new MovesStrategy({
+    clientID: config.Moves.clientID,
+    clientSecret: config.Moves.clientSecret,
+    scope: ['activity', 'location'],
+    callbackURL: config.Moves.callbackURL
+  }, (accessToken, refreshToken, profile, done) => {
     done(null, {
       accessToken: accessToken,
       refreshToken: refreshToken,
@@ -18,13 +18,12 @@ passport.use(new MovesStrategy({
   })
 );
 
-passport.serializeUser((user, done) => {
-  done(null, user);
-});
+  passport.serializeUser((user, done) => {
+    done(null, user);
+  });
 
-passport.deserializeUser((obj, done) => {
-  done(null, obj);
-});
-
-module.exports = passport;
+  passport.deserializeUser((obj, done) => {
+    done(null, obj);
+  });
+};
 
