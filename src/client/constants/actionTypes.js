@@ -1,2 +1,2 @@
-export const ADD_USER = 'ADD_USER';
+export const RECEIVE_USER = 'RECEIVE_USER';
 export const ERROR = 'ERROR';

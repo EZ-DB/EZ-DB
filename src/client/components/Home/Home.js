@@ -8,13 +8,13 @@ const Home = (props) => (
   <div>
     <HomeNavBar />
     <LoginModal />
-    <SignupModal postUser={props.postUser} />
+    <SignupModal addUser={props.addUser} />
     <LandingImage />
   </div>
 );
 
 Home.propTypes = {
-  postUser: React.PropTypes.func,
+  addUser: React.PropTypes.func,
 };
 
 export default Home;

@@ -2,12 +2,12 @@ import * as types from '../constants/actionTypes';
 
 export const error = err => ({ type: 'ERROR', data: err });
 
-export const addUser = user => {
+export const receiveUser = user => {
   console.log('info for add user', user); 
-  return { type: ADD_USER, data: user };
+  return { type: RECEIVE_USER, data: user };
 };
 
-export const postUser = (name, username, password, email, weight, bmi, goal, points) => {
+export const addUser = (name, username, password, email, weight, bmi, goal, points) => {
   const payload = JSON.stringify({ name, username, password, email, weight, bmi, goal, points });
 
   return dispatch => (
@@ -21,7 +21,7 @@ export const postUser = (name, username, password, email, weight, bmi, goal, poi
       body: payload,
     })
     .then(res => res.json())
-    .then(user => dispatch(addUser(user)))
+    .then(user => dispatch(receiveUser(user)))
     .catch(err => dispatch(error(err)))
   );
 };

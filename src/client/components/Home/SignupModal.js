@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class SignupModal extends Component {
   constructor(props) {
     super(props);
+    console.log('INSIDE SIGNUP', props);
   } 
 
   handleSubmit(event) {
@@ -17,7 +18,7 @@ class SignupModal extends Component {
       goal: this.refs.goal.value,
       points: 0
     };
-    this.props.postUser(formData);
+    this.props.addUser(formData);
   }
 
   render() {
@@ -91,7 +92,7 @@ class SignupModal extends Component {
 }
 
 SignupModal.propTypes = {
-  postUser: React.PropTypes.func,
+  addUser: React.PropTypes.func,
 };
 
 export default SignupModal;
