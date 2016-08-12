@@ -4,17 +4,9 @@
 
 ## Team
 
-[![Tegan Duong](https://s31.postimg.org/60kowz7or/Tegan.png)](http://github.com/teganduong)
-Tegan Duong
-
-[![Lynn Chen](https://s31.postimg.org/6njlmi4kr/lynn.png)](http://github.com/lcbits)
-Lynn Chen
-
-[![AJ Grande](https://s31.postimg.org/whteca4kr/image.png)](http://github.com/ajgrande924)
-AJ Grande
-
-[![Peter Chim](https://s31.postimg.org/ph5eji2sr/peter.png)](http://github.com/pchim)
-Peter Chim
+| [![Tegan Duong](https://s31.postimg.org/60kowz7or/Tegan.png)](http://github.com/teganduong) | [![Lynn Chen](https://s31.postimg.org/6njlmi4kr/lynn.png)](http://github.com/lcbits) | [![AJ Grande](https://s31.postimg.org/whteca4kr/image.png)](http://github.com/ajgrande924) | [![Peter Chim](https://s31.postimg.org/ph5eji2sr/peter.png)](http://github.com/pchim) |
+|    :---:      |     :---:     |    :---:      |   :---:    |
+| Tegan Duong   | Lynn Chen     |  AJ Grande    | Peter Chim |
 
 
 ## Table of Contents
@@ -31,7 +23,7 @@ Peter Chim
 
 ## Demo
 
-Visit [Fit Together](fit-together.me) and click on the Demo button to get started
+Visit [Fit Together](http://fit-together.me) and click on the Demo button to get started
 
 Interact with teams in your community
 ![Team Chat](https://s31.postimg.org/hhwhy65mz/team_chat.png)
