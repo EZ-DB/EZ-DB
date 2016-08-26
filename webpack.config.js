@@ -1,4 +1,25 @@
 const webpack = require('webpack');
+let production = false;
+let fp = 'dev';
+let plugs = [];
+if (process.env.NODE_ENV === 'production') {
+  production = true;
+  fp = 'dist';
+  plugs = [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),  
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+  ];
+}
+console.log('node env', process.env.NODE_ENV);
 const config = {
   context: `${__dirname}/src/client`,
   entry: {
@@ -8,7 +29,7 @@ const config = {
 
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/dev/client`,
+    path: `${__dirname}/${fp}/client`,
   },
 
   module: {
@@ -38,13 +59,6 @@ const config = {
     ],
   },
 
-  // plugins: [
-  //   new webpack.optimize.DedupePlugin(),
-  //   new webpack.optimize.UglifyJsPlugin({
-  //     compress: {
-  //       warnings: false
-  //     }
-  //   }),
-  // ]
+  plugins: plugs
 };
 module.exports = config;
